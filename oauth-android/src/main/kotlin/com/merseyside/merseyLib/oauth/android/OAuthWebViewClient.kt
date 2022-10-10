@@ -6,7 +6,7 @@ import android.os.Build
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import com.merseyside.merseyLib.kotlin.Logger
+import com.merseyside.merseyLib.kotlin.logger.Logger
 import com.merseyside.merseyLib.oauth.core.OAuthConfig
 
 class OAuthWebViewClient(private val oAuthConfig: OAuthConfig) : WebViewClient() {

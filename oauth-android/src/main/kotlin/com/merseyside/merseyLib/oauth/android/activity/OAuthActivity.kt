@@ -10,7 +10,7 @@ import android.os.Bundle
 import android.webkit.CookieManager
 import android.webkit.WebView
 import com.merseyside.archy.presentation.activity.BaseActivity
-import com.merseyside.merseyLib.kotlin.Logger
+import com.merseyside.merseyLib.kotlin.logger.Logger
 import com.merseyside.merseyLib.kotlin.serialization.deserialize
 import com.merseyside.merseyLib.kotlin.serialization.serialize
 import com.merseyside.merseyLib.oauth.android.OAuthWebViewClient
