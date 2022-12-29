@@ -10,7 +10,7 @@ plugins {
 }
 
 allprojects {
-    version = "1.0.0"
+    version = "1.0.1"
     group = "io.github.merseyside"
 }
 

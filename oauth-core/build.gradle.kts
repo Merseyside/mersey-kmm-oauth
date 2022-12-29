@@ -5,8 +5,8 @@ plugins {
         plugin(kotlin.multiplatform)
         plugin(moko.multiplatform)
         plugin(kotlin.serialization)
-        id(mersey.kotlin.convention.id())
-        id(mersey.android.convention.id())
+        id(mersey.kotlin.extension.id())
+        id(mersey.android.extension.id())
     }
     `maven-publish-config`
 }
@@ -42,7 +42,7 @@ kotlin {
 }
 
 
-kotlinConvention {
+kotlinExtension {
     debug = true
     setCompilerArgs(
         "-Xinline-classes",
