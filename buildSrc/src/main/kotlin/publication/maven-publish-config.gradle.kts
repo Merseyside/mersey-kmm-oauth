@@ -1,7 +1,6 @@
 import java.util.Base64
 
 plugins {
-    id("javadoc-stub-convention")
     `maven-publish`
     signing
 }

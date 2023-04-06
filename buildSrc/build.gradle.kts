@@ -1,6 +1,5 @@
 plugins {
     kotlin("jvm") version "1.7.0"
-    kotlin("plugin.serialization") version "1.7.0"
     `kotlin-dsl`
 }
 
@@ -15,7 +14,7 @@ dependencies {
     with(catalogGradle) {
         implementation(moko.mobileMultiplatform)
         implementation(mersey.gradlePlugins)
-        implementation(android.gradle)
+        implementation(android.gradle.stable)
         implementation(kotlin.gradle)
         implementation(kotlin.serialization)
         implementation(nexusPublish)
