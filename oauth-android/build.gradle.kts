@@ -21,7 +21,7 @@ android {
         dataBinding = true
     }
 
-    packagingOptions {
+    packaging {
         resources.excludes.addAll(
             listOf(
                 "META-INF/*.kotlin_module",
