@@ -9,6 +9,7 @@ plugins {
         id(mersey.android.extension.id())
     }
     `maven-publish-config`
+    `javadoc-stub-convention`
 }
 
 android {

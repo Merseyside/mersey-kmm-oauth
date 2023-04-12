@@ -10,8 +10,10 @@ plugins {
 }
 
 allprojects {
-    version = "1.0.2"
-    group = "io.github.merseyside"
+    plugins.withId("org.gradle.maven-publish") {
+        group = "io.github.merseyside"
+        version = multiplatformLibs.versions.mersey.oauth
+    }
 }
 
 tasks.register("clean", Delete::class).configure {
