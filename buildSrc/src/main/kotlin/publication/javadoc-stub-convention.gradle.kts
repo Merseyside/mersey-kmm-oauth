@@ -1,5 +1,5 @@
 plugins {
-    id("maven-publish-config")
+    id("org.gradle.maven-publish")
 }
 
 val javadocJar by tasks.registering(Jar::class) {

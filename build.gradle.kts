@@ -12,7 +12,7 @@ plugins {
 allprojects {
     plugins.withId("org.gradle.maven-publish") {
         group = "io.github.merseyside"
-        version = multiplatformLibs.versions.mersey.oauth
+        version = multiplatformLibs.versions.mersey.oauth.get()
     }
 }
 
