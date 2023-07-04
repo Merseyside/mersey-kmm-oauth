@@ -27,7 +27,7 @@ class OAuthActivity : BaseActivity() {
     private val config: OAuthConfig by lazy { getOAuthConfig() }
 
     override fun getLayoutId() = R.layout.activity_browser
-    override fun getToolbar() = null
+    override fun getMainToolbar() = null
     override fun getFragmentContainer() = null
 
     override fun applyOverrideConfiguration(overrideConfiguration: Configuration) {

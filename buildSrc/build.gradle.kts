@@ -1,6 +1,4 @@
 plugins {
-    kotlin("jvm") version "1.7.0"
-    kotlin("plugin.serialization") version "1.7.0"
     `kotlin-dsl`
 }
 
@@ -18,6 +16,6 @@ dependencies {
         implementation(android.gradle)
         implementation(kotlin.gradle)
         implementation(kotlin.serialization)
-        implementation(nexusPublish)
+        implementation(maven.publish.plugin)
     }
 }

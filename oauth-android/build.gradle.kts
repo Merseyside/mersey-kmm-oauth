@@ -6,7 +6,7 @@ plugins {
         id(mersey.android.extension.id())
         id(mersey.kotlin.extension.id())
     }
-    `android-maven-publish-config`
+    `maven-publish-plugin`
 }
 
 android {
@@ -15,14 +15,13 @@ android {
 
     defaultConfig {
         minSdk = Application.minSdk
-        targetSdk = Application.targetSdk
     }
     
     buildFeatures {
         dataBinding = true
     }
 
-    packagingOptions {
+    packaging {
         resources.excludes.addAll(
             listOf(
                 "META-INF/*.kotlin_module",

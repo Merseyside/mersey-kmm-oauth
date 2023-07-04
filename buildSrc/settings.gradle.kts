@@ -1,5 +1,3 @@
-enableFeaturePreview("VERSION_CATALOGS")
-
 pluginManagement {
     repositories {
         mavenCentral()
@@ -16,7 +14,7 @@ dependencyResolutionManagement {
         gradlePluginPortal()
     }
 
-    val catalogVersions = "1.6.4"
+    val catalogVersions = "1.7.5"
     val group = "io.github.merseyside"
     versionCatalogs {
 

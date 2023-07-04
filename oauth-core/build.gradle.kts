@@ -8,7 +8,7 @@ plugins {
         id(mersey.kotlin.extension.id())
         id(mersey.android.extension.id())
     }
-    `maven-publish-config`
+    `maven-publish-plugin`
 }
 
 android {
@@ -17,7 +17,6 @@ android {
 
     defaultConfig {
         minSdk = Application.minSdk
-        targetSdk = Application.targetSdk
     }
 
     buildFeatures {

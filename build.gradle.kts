@@ -1,20 +1,27 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
-    repositories {
-        gradlePluginPortal()
-    }
-}
-
-plugins {
-    `nexus-config`
-}
-
 allprojects {
-    version = "1.0.1"
-    group = "io.github.merseyside"
+    plugins.withId("org.gradle.maven-publish") {
+        group = "io.github.merseyside"
+        version = multiplatformLibs.versions.mersey.oauth.get()
+    }
 }
 
 tasks.register("clean", Delete::class).configure {
     group = "build"
     delete(rootProject.buildDir)
+}
+
+val javadocDisabledModules = listOf(
+    "oauth-core",
+    "oauth-android"
+)
+
+subprojects {
+    gradle.taskGraph.whenReady {
+        if (javadocDisabledModules.contains(this@subprojects.name)) {
+            tasks.matching { it.name == "javaDocReleaseGeneration" }.configureEach {
+                // See: https://youtrack.jetbrains.com/issue/KTIJ-19005/JDK-17-PermittedSubclasses-requires-ASM9-exception-multiple-times-per-second-during-analysis
+                enabled = false
+            }
+        }
+    }
 }
