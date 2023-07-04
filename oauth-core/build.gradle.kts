@@ -8,8 +8,7 @@ plugins {
         id(mersey.kotlin.extension.id())
         id(mersey.android.extension.id())
     }
-    `maven-publish-config`
-    `javadoc-stub-convention`
+    `maven-publish-plugin`
 }
 
 android {
