@@ -7,7 +7,7 @@ allprojects {
 
 tasks.register("clean", Delete::class).configure {
     group = "build"
-    delete(rootProject.buildDir)
+    delete(rootProject.layout.buildDirectory)
 }
 
 val javadocDisabledModules = listOf(
